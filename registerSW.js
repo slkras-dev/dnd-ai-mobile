@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/dnd-ai-mobile/sw.js', { scope: '/dnd-ai-mobile/' })})}
