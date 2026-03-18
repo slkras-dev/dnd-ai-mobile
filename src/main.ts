@@ -1,5 +1,6 @@
 import './style.css'
 import { icon } from './icons'
+import { setupInstallPrompt } from './install'
 import { renderChat } from './screens/chat'
 import { renderCharacter } from './screens/character'
 import { renderInventory } from './screens/inventory'
@@ -39,6 +40,8 @@ screens[0]!.classList.add('active')
 // Mount
 screens.forEach(s => app.appendChild(s))
 app.appendChild(tabBar)
+
+setupInstallPrompt()
 
 // Switch tabs
 tabBar.addEventListener('click', (e) => {

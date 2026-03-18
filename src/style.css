@@ -1206,3 +1206,124 @@ button:active {
 .related-tag-reward {
   color: var(--warning);
 }
+
+/* ================================================
+   INSTALL PROMPT
+   ================================================ */
+
+.install-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+  animation: fade-in 0.2s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.install-sheet {
+  width: 100%;
+  background: var(--bg-primary);
+  border-radius: 20px 20px 0 0;
+  padding: 24px 24px max(24px, env(safe-area-inset-bottom, 24px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: slide-up 0.25s ease;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.install-app-icon img {
+  border-radius: 16px;
+  display: block;
+}
+
+.install-app-name {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  margin-top: 4px;
+}
+
+.install-app-desc {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.install-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.install-dismiss {
+  background: none;
+  border: none;
+  color: var(--text-tertiary);
+  font-size: var(--font-size-base);
+  padding: 10px;
+  margin-top: 2px;
+}
+
+/* iOS steps */
+.install-ios-steps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  margin-top: 4px;
+}
+
+.install-ios-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--font-size-md);
+}
+
+.install-ios-num {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-circle);
+  background: var(--accent);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.install-ios-share {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  color: var(--accent);
+  display: inline-block;
+  margin: 0 2px;
+}

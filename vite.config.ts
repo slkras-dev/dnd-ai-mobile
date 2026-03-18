@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: '/dnd-ai-mobile/',
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
@@ -13,7 +14,8 @@ export default defineConfig({
         background_color: '#FFFFFF',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
+        scope: '/dnd-ai-mobile/',
+        start_url: '/dnd-ai-mobile/',
         icons: [
           { src: 'pwa-64x64.png', sizes: '64x64', type: 'image/png' },
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
